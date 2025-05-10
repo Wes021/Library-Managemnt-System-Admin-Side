@@ -1,0 +1,48 @@
+﻿
+@model UserViewModel
+<div class="tableView">
+
+
+<div >
+    <table>
+        <tr>
+           
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>phone number</th>
+            
+
+        </tr>
+        
+        @if (Model.Users.Any())
+        {
+
+
+            @foreach (var User in Model.Users)
+            {
+                <tr>
+                    <td>@User.UserName</td>
+                    <td>@User.Email</td>
+                    <td>@User.PhoneNumber</td>
+                    
+
+
+
+                        <td id="tableBtns"><a asp-controller="Category" asp-action="Edit" asp-route-id="">Edit</a></td>
+                        <td id="tableBtns"><a asp-controller="Category" asp-action="DeleteUserAsync" asp-route-id="">Delete</a></td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td id="note" colspan="10">No Data Available</td>
+            </tr>
+        }
+
+
+    </table>
+
+</div>
+
+</div>

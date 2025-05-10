@@ -1,0 +1,14 @@
+﻿@model Category
+<div>
+    <form  method="post" asp-controller="Category" asp-action="Update">
+        
+        <label asp-for="CategoryId"></label>
+        <span>: @Model.CategoryId</span>
+        <input asp-for="CategoryId"  hidden />
+
+        <label asp-for="CategoryN"></label>
+        <input asp-for="CategoryN" />
+
+        <input type="submit"  value="Update Category" />
+    </form>
+</div>

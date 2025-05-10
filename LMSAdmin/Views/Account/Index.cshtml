@@ -1,0 +1,46 @@
+﻿@model ApplicationUser
+<div>
+    
+    <div class="Profile-Container">
+        <div class="profile-pic">
+            <img src="https://img.icons8.com/?size=100&id=7819&format=png&color=000000" alt="Alternate Text" />
+        </div>
+        <div class="profile-info">
+            <div class="data1">
+                <div class="info">
+                    <label>Id:</label><p>@Model.Id</p>
+                </div>
+
+                <div class="info">
+                    <label>Name:</label><p>@Model.Name</p>
+                </div>
+
+                <div class="info">
+                    <label>Username:</label><p>@Model.UserName</p>
+                </div>
+            </div>
+
+            <div class="data2">
+                <div class="info">
+                    <label>Phone Number:</label><p>@Model.PhoneNumber</p>
+                </div>
+                <div class="info">
+                    <label>Status:</label>
+                    @if (Model.UserStatusId == 1)
+                    {
+                        <p style="color:lawngreen">Active</p>
+                    }
+                    else if (Model.UserStatusId == 2)
+                    {
+                        <p style="color:red">In-Active/Suspended</p>
+                    }
+                    
+                </div>
+
+                <div class="info">
+                    <a id="editProBtn">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@using LMSAdmin.ViewModel
+@model CategoryViewModel
+
+<div class="tableView">
+    <a class="addButton" asp-controller="Category" asp-action="Add">Add Category</a>
+
+<table>
+    <tr>
+        <th>Category Id</th>
+        <th>Category</th>
+        
+
+
+    </tr>
+    @if(Model.Categories.Any()){
+
+        @foreach (var category in Model.Categories)
+        {
+
+            <tr>
+                <td>@category.CategoryId</td>
+                <td>@category.CategoryN</td>
+
+                    <td id="tableBtns"><a asp-controller="Category" asp-action="Edit" asp-route-id="@category.CategoryId">Edit</a></td>
+                    <td id="tableBtns"><a asp-controller="Category" asp-action="Delete" asp-route-id="@category.CategoryId">Delete</a></td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td id="note" colspan="10"><span>No Data Availible</span></td>
+        </tr>
+    }
+
+
+</table>
+
+</div>

@@ -1,0 +1,120 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tables.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/AddEditBook.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/profile.css" asp-append-version="true" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="Container">
+        @* <header class="navbarContainer">
+        <nav class="navbar">
+            <div id="TitleLogo">
+                <p>Test Project</p>
+            </div>
+
+            <div id="links">
+                <a asp-controller="Book" asp-action="Index">Books</a>
+                <a asp-controller="Borrow" asp-action="Index">Borrows</a>
+                <a asp-controller="Category" asp-action="DisplayCategories">Categories</a>
+                <a asp-controller="Language" asp-action="Index">Languages</a>
+                <a asp-controller="User" asp-action="Index">Users</a>
+            </div>
+
+        </nav>
+    </header> *@
+     <div class="MainContainer">
+
+
+       <div class="sidenavbar">
+
+
+        <div class="Btns">
+
+            <div id="sidLinks">
+                <i class="fas fa-book"></i><a asp-controller="Book" asp-action="Index"> Books</a>
+            </div>
+
+            <div id="sidLinks">
+                <i class="fas fa-language"></i><a asp-controller="Language" asp-action="Index"> Languages</a>
+            </div id="sidLinks">
+
+
+            <div id="sidLinks">
+                <i class="fas fa-layer-group"></i><a asp-controller="Category" asp-action="DisplayCategories"> Categories</a>
+            </div id="sidLinks">
+
+            <div id="sidLinks">
+                <i class="fas fa-users"></i><a asp-controller="Borrow" asp-action="Index"> Borrowers</a>
+            </div id="sidLinks">
+
+            <div id="sidLinks">
+                <i class="fas fa-user"></i><a asp-controller="User" asp-action="Index"> Users</a>
+            </div id="sidLinks">
+        </div>
+
+       
+        
+        <div class="acount">
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <img src="https://img.icons8.com/?size=100&id=7dLThMlUIOFe&format=png&color=000000" alt="Admin" />
+                    <div class="profile-info">
+                        <p  class="name">@user.Name</p>
+
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                    <div id="sidLinks">
+                       <i class="fa-solid fa-user"></i><a asp-controller="Account" asp-action="Index" asp-route-id="@user.Id" >Profile</a>
+                    </div>
+                    <div id="sidLinks">
+                       <i class="fa-solid fa-gear"></i> <a >Settings</a>
+                     </div>
+                    <div id="sidLinks">
+
+                        <form id="logoutBtn" asp-area="Identity" asp-page="/Account/Logout" method="post">
+                            <i class="fa-solid fa-right-from-bracket"></i><button type="submit">Logout</button>
+                        </form>
+                       
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    
+    
+        <div class="content">
+        
+            
+            @RenderBody()
+            
+ 
+
+        </div>
+
+    </div>
+    </div>
+    
+    
+
+
+   <script src="https://unpkg.com/lucide@latest"></script>
+
+</body>
+</html>

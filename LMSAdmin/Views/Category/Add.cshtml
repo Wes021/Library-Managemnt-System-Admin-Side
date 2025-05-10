@@ -1,0 +1,14 @@
+﻿@model Category
+
+<div>
+    <form method="post" asp-controller="Category" asp-action="Add">
+    
+        <label >Category ID</label>
+        <input type="type" name="name" value="" placeholder="Auto Generated" disabled /><br />
+
+        <label asp-for="CategoryN"></label>
+        <input asp-for="CategoryN" type="text"  />
+
+        <input type="submit" name="name" value="Add" />
+    </form>
+</div>

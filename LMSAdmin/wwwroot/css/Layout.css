@@ -1,0 +1,196 @@
+﻿* {
+    font-family: Nunito, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*.navbarContainer{
+    width:100%;
+}
+
+.navbarContainer > .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: burlywood;
+    padding: 10px;
+    width: 100%;
+}
+
+    header > .navbar > #links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }*/
+
+    a{
+        text-decoration:none;
+        color:black;
+    }
+
+   
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* content starts at the top */
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+}
+.tableView {
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+.sidenavbar {
+    width: 160px;
+    min-height: 100vh; /* full height */
+    background-color: #fcdeb8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+}
+
+.Btns{
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+    align-items:center;
+    gap:40px;
+}
+
+.acount {
+    
+}
+#sidLinks {
+    display: flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items:center;
+    align-content:center;
+   gap:10px;
+    width: 100%;
+    padding:5px;
+}
+    #sidLinks:hover {
+        background-color: white;
+    }
+.submitBtn{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+}
+
+.acount img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.sidenavbar i {
+    color: #ff6b5e; /* coral, or any color you want */
+}
+
+/* Account dropdown styling */
+.sidenavbar .acount {
+    display: flex;
+    justify-content: left;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 140px;
+    align-items: center;
+    padding: 2px;
+    gap: 10px;
+}
+
+.sidenavbar .dropdown {
+    position: relative;
+}
+
+.sidenavbar .dropbtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+    .sidenavbar .dropbtn img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.sidenavbar .profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+    .sidenavbar .profile-info .name {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+.sidenavbar .dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: -80px;
+    left: 100%;
+    background-color: #fcdeb8;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+    .sidenavbar .dropdown-content a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        
+    }
+
+        .sidenavbar .dropdown-content a:hover {
+            background-color: white;
+        }
+
+.sidenavbar .acount:hover .dropdown-content {
+    display: block;
+}
+
+#logoutBtn > button {
+    background-color: #fcdeb8;
+    border: none;
+    color: black;
+}
+/* Side navbar stays on the left */
+
+
+/* Content takes the remaining space and is centered */
+
+
+    

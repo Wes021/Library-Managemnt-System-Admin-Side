@@ -1,0 +1,68 @@
+﻿body {
+    background-color: #fcdeb8;
+}
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border: solid none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+.LoginContainer{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+#logiForm{
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+    align-items:center;
+    width:100%;
+    gap:5px;
+
+}
+.input-group{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-content:center;
+    
+}
+
+.form-control {
+    width: 300px;
+    height: 30px;
+    border: solid none;
+    border-radius: 15px;
+    padding:5px;
+    padding-left:10px;
+}
+.checkbox {
+    width: 300px;
+    
+    display: flex;
+    justify-content: left;
+}
+#login-submit {
+    border: solid none;
+    border-radius: 15px;
+    width:150px;
+    height:25px;
+    cursor:pointer;
+    background-color:white;
+}
+    #login-submit:hover {
+        width: 170px;
+        height: 30px;
+        
+        background-color: #fcdeb8;
+    }

@@ -1,0 +1,95 @@
+﻿@model AddBookViewModel
+
+<div class="AddView">
+    <form class="AddBookform" asp-controller="Book" asp-action="Update">
+
+        <div id="sec1">
+            <div id="fields">
+                <label>Book ID</label>
+                <span>: @Model.Book.BookId</span>
+                <input asp-for="Book.BookId"  hidden/>
+            </div>
+            
+
+            <div id="fields">
+                <label>Book title</label>
+                <input type="text" asp-for="Book.BookTitle" />
+            </div>
+            
+
+            <div id="fields">
+                <label>ISBN</label>
+            <input type="number" asp-for="Book.Isbn" />
+            </div>
+            
+
+            <div id="fields">
+                <label>Publisher</label>
+                <input type="type" asp-for="Book.Publisher" />
+            </div>
+            
+
+            <div id="fields">
+                <label>Language</label>
+                <select asp-for="Book.Language" asp-items="@Model.languages">
+                    <option>Select</option>
+                </select>
+            </div>
+            
+
+            <div id="fields">
+                <label>Year</label>
+                <input type="type" asp-for="Book.Year" />
+            </div>
+            
+
+        </div>
+
+        <div id="sec2">
+
+            <div id="fields">
+                <label>Category</label>
+                <select asp-for="Book.Category" asp-items="Model.categories">
+                    <option>Select</option>
+                </select>
+            </div>
+            
+
+            <div id="fields">
+                <label>Image</label>
+                <input type="type" asp-for="Book.Image" />
+            </div>
+            
+
+            <div id="fields">
+                <label>Status</label>
+                <select asp-for="Book.Status" asp-items="Model.statues">
+                    <option>Select</option>
+                </select>
+            </div>
+            
+
+            <div id="fields">
+                <label>Fine rate</label>
+                <input type="number" asp-for="Book.FineRate" />
+            </div>
+            
+
+            <div id="fields">
+                <label>Total copies</label>
+                <input type="text" asp-for="Book.TotalCopies" />
+            </div>
+            
+            
+
+            <div class="submitBtn">
+                <input type="submit" value="edit Book" />
+            </div>
+        </div>
+
+
+        
+    </form>
+    
+    
+</div>

@@ -1,0 +1,15 @@
+﻿@model Language
+
+<div>
+    <form method="post" asp-controller="Language" asp-action="Add">
+    
+        <label>Language ID</label>
+        <input type="type" name="name" placeholder="Auto generated" />
+
+        <label>Language</label>
+
+        <input asp-for="LanguageN" type="text" />
+        
+        <input type="submit" value="Add"  />
+    </form>
+</div>

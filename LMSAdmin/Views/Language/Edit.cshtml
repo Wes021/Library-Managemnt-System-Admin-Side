@@ -1,0 +1,13 @@
+﻿@model Language
+<div>
+    <form  method="post" asp-controller="Language" asp-action="Update">
+        
+        
+        <input asp-for="LanguageId"  hidden/>
+
+        <label asp-for="LanguageN"></label>
+        <input asp-for="LanguageN" />
+
+        <input type="submit"  value="Update Category" />
+    </form>
+</div>

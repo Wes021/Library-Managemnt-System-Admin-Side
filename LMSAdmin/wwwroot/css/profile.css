@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.Profile-Container, .profile-info, .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Profile-Container {
+    border: solid none;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fcdeb8;
+}
+
+.info{
+    justify-content:left;
+    gap:5px;
+    font-size:larger;
+    padding:10px;
+}
+.data1,.data2{
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+    gap:30px;
+}
+
+img{
+    width:300px;
+    height:auto;
+}
+#editProBtn {
+    text-decoration: none;
+    color: deepskyblue;
+    cursor:pointer;
+}
+
+#editProBtn:hover{
+    
+    background-color:white;
+}

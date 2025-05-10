@@ -1,0 +1,28 @@
+﻿@using LMSAdmin.ViewModel
+@model LanguageViewModel
+
+
+
+<div class="tableView">
+    <a class="addButton" asp-controller="Language" asp-action="Add">Add Language</a>
+    <table>
+        <tr>
+            <th>Language Id</th>
+            <th>Language</th>
+
+
+        </tr>
+
+        @foreach (var Category in Model.languages)
+        {
+            <tr>
+                <td>@Category.LanguageId</td>
+                <td>@Category.LanguageN</td>
+                <td id="tableBtns"><a asp-controller="Language" asp-action="Edit" asp-route-id="@Category.LanguageId">Edit</a></td>
+                <td id="tableBtns"><a asp-controller="Language" asp-action="Delete" asp-route-id="@Category.LanguageId">Delete</a></td>
+            </tr>
+        }
+
+
+    </table>
+</div>

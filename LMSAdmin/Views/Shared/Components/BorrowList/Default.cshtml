@@ -1,0 +1,56 @@
+﻿@using LMSAdmin.ViewModel
+@model BorrowViewModel
+<table class="tableView">
+    <tr>
+        <th>Borrow Id</th>
+        <th>User Id</th>
+        <th>User name</th>
+        <th>User email</th>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <td>Borrowed at</td>
+        <td>Returned at</td>
+        <th>Borrow Status</th>
+        <th>Fine amount</th>
+
+
+    </tr>
+    @if(Model.Borrows.Any()){
+
+        @foreach (var Borrow in Model.Borrows)
+        {
+
+            <tr>
+                <td>@Borrow.BorrowId</td>
+                <td>@Borrow.UserId</td>
+                <td>@Borrow.User</td>
+                <td>@Borrow.User.Email</td>
+                <td>@Borrow.BookId</td>
+                <td>@Borrow.Book.BookTitle</td>
+                <td>@Borrow.BorrowedAt</td>
+                <td>@Borrow.ReturnAt</td>
+                <td>@Borrow.BorrowStatus.BorrowStatus1</td>
+                <td>
+                    @if (Borrow.FineAmount>0)
+                    {
+                        @Borrow.FineAmount.ToString("c")
+                    }
+                    else
+                    {
+                        <span>No Fine</span>
+                    }
+                </td>
+                <td id="tableBtns"><a asp-controller="Category" asp-action="Edit" asp-route-id="">Edit</a></td>
+                <td id="tableBtns"><a asp-controller="" asp-action="" asp-route-id=""></a>Delete</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td id="note" colspan="10">No Data Available</td>
+        </tr>
+    }
+
+
+</table>

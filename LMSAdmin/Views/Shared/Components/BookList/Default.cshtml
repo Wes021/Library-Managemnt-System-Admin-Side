@@ -1,0 +1,65 @@
+﻿@using LMSAdmin.ViewModel
+@model BookViewModelClass
+
+
+<div class="tableView">
+    <a class="addButton" asp-controller="Book" asp-action="Add">Add Book</a>
+    <table class="rounded-table">
+        <tr>
+            <th>Book ID</th>
+            <th>Book title</th>
+            <th>ISBN</th>
+            <th>Publisher</th>
+            <th>Language</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Fine rate</th>
+            <th>Created At</th>
+            <th>Total Copies</th>
+
+        </tr>
+        @if (Model.Books.Any())
+        {
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.BookId</td>
+                    <td>@book.BookTitle</td>
+                    <td>@book.Isbn</td>
+                    <td>@book.Publisher</td>
+
+                    <td>
+                        @book.LanguageNavigation.LanguageN
+                    </td>
+                    <td>@book.Year</td>
+
+                    <td>
+                        @book.CategoryNavigation.CategoryN
+                    </td>
+
+
+                    <td>
+                        @book.StatusNavigation.BookStatusN
+                    </td>
+                    <td>@book.FineRate</td>
+                    <td>@book.CreatedAt</td>
+                    <td>@book.TotalCopies</td>
+                    <td id="tableBtns"><a asp-controller="Book" asp-action="Edit" asp-route-id="@book.BookId">Edit</a></td>
+                    <td id="tableBtns"><a asp-controller="Book" asp-action="Delete" asp-route-id="@book.BookId">Delete</a></td>
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td id="note" colspan="11"><span>No Data Availible</span></td>
+            </tr>
+        }
+        
+
+    </table>
+
+    
+</div>
