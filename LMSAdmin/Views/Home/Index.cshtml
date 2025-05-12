@@ -1,22 +1,40 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model StatsViewModel
 
 <div>
     <div class="dataContainer">
         <div class="stats">
+            <div id="text">
+                <i class="fa-solid fa-book"></i> <p>Books:</p>
+            </div>
+             
 
+            <div id="num">
+                @(Model?.BooksCount ?? 0)
+            </div>
+          
         </div>
 
         <div class="stats">
+            <div id="text">
+                <i class="fa-solid fa-book-open"></i> <p>Borrows:</p>
+            </div>
 
+
+            <div id="num">
+                @(Model?.BorrowsCount ?? 0)
+            </div>
         </div>
 
         <div class="stats">
+            <div id="text">
+                <i class="fa-solid fa-users"></i> <p>Users:</p>
+            </div>
 
+            <div id="num">
+                @(Model?.UsersCount ?? 0)
+            </div>
         </div>
         
+
     </div>
 </div>

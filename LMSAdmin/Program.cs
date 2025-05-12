@@ -50,6 +50,7 @@ namespace LMSAdmin
             builder.Services.AddScoped<IStatusRepository, StatusRepository>();
             builder.Services.AddScoped<IBorrowRepository, BorrowRepository>();
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IStatsRepository, StatsRepository>();
             builder.Services.AddRazorPages();
             var app = builder.Build();
 
@@ -73,7 +74,7 @@ namespace LMSAdmin
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages()
-                         .AllowAnonymous(); // This allows access to Identity pages like login.
+                         .AllowAnonymous(); 
             });
             app.MapControllerRoute(
                 name: "default",
