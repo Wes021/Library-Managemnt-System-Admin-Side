@@ -1,6 +1,3 @@
-Great introduction, وسام! Here's a professional and polished version of your README introduction for GitHub that you can use or adapt:
-
----
 
 Library Management System -Admin
 
